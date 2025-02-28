@@ -8,6 +8,10 @@
             --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
         }
+
+        html {
+            scroll-padding-top: 80px; /* Adjust based on your navbar height */
+        }
         
         * {
             margin: 0;
@@ -129,7 +133,7 @@
 
         
         .hero h1 {
-            font-size: 1rem;
+            font-size: 2rem;
             margin-bottom: 1rem;
             color: var(--secondary-color);
         }
