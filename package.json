@@ -4,9 +4,9 @@
   "description": "Portfolio",
   "main": "index.js",
   "scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
-  "build": "echo 'Build completed - files already in public folder'"
-},
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo 'Build completed - files already in public folder'"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/svidhaji/myportfolio.git"
