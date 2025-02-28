@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "jobportfolio-4a255"
-  }
+  },
+  "targets": {
+    "jobportfolio-4a255": {
+      "hosting": {
+        "codebysh": [
+          "jobportfolio-4a255"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
