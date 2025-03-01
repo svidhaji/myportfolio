@@ -36,26 +36,29 @@
 </head>    
 <body>
     <!-- Navigation -->
-    <nav>
-        <div class="logo">Said Haji</div>
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#blog">Blog</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <button class="mobile-menu-btn">
-            <i class="fas fa-bars"></i>
-        </button>
-    </nav>
+<nav>
+    <div class="logo">
+        <i class="fas fa-code"></i> <!-- This adds a code icon before your name -->
+        <span>Said Haji</span>
+    </div>
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+    </button>
+</nav>
     
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Hi, I'm <span id="typed-name" style="color: var(--primary-color);"></span></h1>
             <h2>Mobile Developer / Student</h2>
-            <p>I build exceptional and accessible digital experiences for the web. Specializing in creating applications with modern technologies including React, Flutter, Android, Node.js, and Firebase.</p>
+            <p>I build exceptional and accessible digital experiences for the web. Specializing in creating applications with modern technologies including React, Flutter, Android, SQL, Node.js, and Firebase.</p>
             <div>
                 <a href="#projects" class="btn">View My Work</a>
                 <a href="#contact" class="btn btn-outline">Contact Me</a>
@@ -64,6 +67,13 @@
         <div class="hero-image">
             <img src="images/cvimg.jpg" alt="Image">
         </div>
+        <!-- Scroll down indicator -->
+        <div class="scroll-indicator">
+            <a href="#about">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
     </section>
     
     <!-- About Section -->
@@ -71,11 +81,11 @@
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
             <div class="about-text">
+                <h3 class="about-title">Hi there! Here's a little story about me..</h3>
                 <p>I'm a passionate developer with experience in building responsive web applications. My journey into coding started when I was in college, where I discovered my love for creating things that live on the internet.</p>
                 <p>With a background in computer science, I've developed a strong foundation in software engineering principles and best practices. I enjoy solving complex problems and turning ideas into reality through clean, efficient code.</p>
                 <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge through technical articles.</p>
                 <a href="images/saidhajicv.pdf" download="My_CV.pdf" class="btn">Download CV</a>
-
             </div>
             <div class="about-skills">
                 <div class="skill-category">
@@ -120,22 +130,22 @@
             <!-- Featured Project -->
             <div class="featured-project">
                 <div class="featured-img-container">
-                    <img src="images/tech.jpg" alt="E-Commerce Platform" class="featured-img">
+                    <img src="images/exeloimg.png" alt="E-Commerce Platform" class="featured-img">
                 </div>
                 <div class="featured-content">
                     <span class="featured-badge">Featured Project</span>
-                    <h3 class="project-title">Exelo E-commerce app</h3>
+                    <h3 class="project-title">Exelo Business Management app</h3>
                     <div class="project-tech">
                         <span class="tech-tag">Flutter</span>
                         <span class="tech-tag">Node.js</span>
                         <span class="tech-tag">Express</span>
                         <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">Firebase Auth</span>
+                        <span class="tech-tag">React</span>
                     </div>
-                    <p class="project-description">A full-featured e-commerce platform with product management, user authentication, shopping cart functionality, and payment processing integration. This project showcases my full-stack development skills and ability to create secure, scalable applications.</p>
+                    <p class="project-description">A off-shore business management platform with product- and inventory management, user authentication, shopping cart functionality, and payment processing integration. This project showcases my full-stack development skills and ability to create secure, scalable applications.</p>
                     <div class="project-links">
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="#"><i class="fas fa-file-alt"></i> Case Study</a>
+                        <a href="https://www.exelo.net/"><i class="fas fa-external-link-alt"></i> Show more</a>
+                        <a href="#"><i class="fas fa-file-alt"></i> Download</a>
                     </div>
                 </div>
             </div>
@@ -144,33 +154,33 @@
             <div class="project-card">
                 <img src="images/coding.jpg" alt="Task Management App" class="project-img">
                 <div class="project-content">
-                    <h3 class="project-title">Task Management App</h3>
+                    <h3 class="project-title">Second hand men's flea market web platform</h3>
                     <div class="project-tech">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">JavaScript</span>
                         <span class="tech-tag">Tailwind CSS</span>
                     </div>
-                    <p class="project-description">A productivity application that helps users organize tasks, set priorities, and track progress. Features include drag-and-drop interface, notifications, and data visualization.</p>
+                    <p class="project-description">An online website tailored for selling mens clothing. A group school project. The idea came up because of the lack of mens used clothing. </p>
                     <div class="project-links">
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="#"><i class="fas fa-file-alt"></i> Case Study</a>
+                        <a href="https://github.com/dawcules/manlysecondhand-fleamarket"><i class="fas fa-external-link-alt"></i> Show more</a>
+                        <a href="#"><i class="fas fa-file-alt"></i> Download</a>
                     </div>
                 </div>
             </div>
             
             <div class="project-card">
-                <img src="images/code.jpg" alt="Weather Dashboard" class="project-img">
+                <img src="images/publictransit.jpg" alt="Weather Dashboard" class="project-img">
                 <div class="project-content">
-                    <h3 class="project-title">Weather Dashboard</h3>
+                    <h3 class="project-title">BuStops Public Transport App with Nokia</h3>
                     <div class="project-tech">
                         <span class="tech-tag">JavaScript</span>
                         <span class="tech-tag">API Integration</span>
                         <span class="tech-tag">CSS Grid</span>
                     </div>
-                    <p class="project-description">An interactive weather application that displays current conditions and forecasts for locations worldwide. Utilizes third-party APIs and implements responsive design principles.</p>
+                    <p class="project-description">A Route Managing app that adds and saves stops and plans you the most convenient routes from home to campus and vice versa all in real-time.</p>
                     <div class="project-links">
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="#"><i class="fas fa-file-alt"></i> Case Study</a>
+                        <a href="https://github.com/KulaginArtur/BuStops"><i class="fas fa-external-link-alt"></i> Show more</a>
+                        <a href="#"><i class="fas fa-file-alt"></i> Download</a>
                     </div>
                 </div>
             </div>
@@ -178,16 +188,16 @@
             <div class="project-card">
                 <img src="images/chat.jpg" alt="Chat Application" class="project-img">
                 <div class="project-content">
-                    <h3 class="project-title">Chat Application</h3>
+                    <h3 class="project-title">ChatBot App, independent school project</h3>
                     <div class="project-tech">
                         <span class="tech-tag">Socket.io</span>
                         <span class="tech-tag">Express</span>
                         <span class="tech-tag">MongoDB</span>
                     </div>
-                    <p class="project-description">Real-time messaging platform with features like user authentication, message threading, and file sharing. Demonstrates proficiency in WebSocket technology and database design.</p>
+                    <p class="project-description">Real-time messaging platform with features like user authentication, message threading, and file sharing. Illustrates the usage of WebSocket technology and end-to-end encryption.</p>
                     <div class="project-links">
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="#"><i class="fas fa-file-alt"></i> Case Study</a>
+                        <a href="#"><i class="fas fa-external-link-alt"></i> Show more</a>
+                        <a href="#"><i class="fas fa-file-alt"></i> Download</a>
                     </div>
                 </div>
             </div>
@@ -199,7 +209,7 @@
         <h2 class="section-title">Latest Articles</h2>
         <div class="blog-grid">
             <div class="article-card">
-                <img src="images/code.jpg" alt="Firebase Authentication" class="article-img">
+                <img src="images/firebaseauth.png" alt="Firebase Authentication" class="article-img">
                 <div class="article-content">
                     <h3 class="article-title">Firebase Authentication: A Comprehensive Guide</h3>
                     <p class="article-date">January 15, 2023</p>
@@ -274,19 +284,19 @@
             <div class="contact-form">
                 <form id="contactForm">
                     <div class="form-group">
-                        <label for="name">Name</label>
+                        <label for="name">Name*</label>
                         <input type="text" id="name" class="form-control" placeholder="Name">
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email">Email*</label>
                         <input type="email" id="email" class="form-control" placeholder="Email">
                     </div>
                     <div class="form-group">
-                        <label for="subject">Subject</label>
+                        <label for="subject">Subject*</label>
                         <input type="text" id="subject" class="form-control" placeholder="Subject">
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
+                        <label for="message">Message*</label>
                         <textarea id="message" class="form-control" placeholder="Your Message"></textarea>
                     </div>
                     <button type="submit" class="btn">Send Message</button>
@@ -314,15 +324,21 @@
     
     <script>
         // Custom alert function
-        function showCustomAlert(message) {
+        function showCustomAlert(message, type = 'success') {
             const alertBox = document.getElementById('customAlert');
             const messageElement = document.getElementById('alertMessage');
+            const iconElement = document.getElementById('alertIcon');
+            const alertButton = document.getElementById('alertButton');
+            
+            // Set the alert type
+            iconElement.className = '';
+            iconElement.classList.add(type);
             
             messageElement.textContent = message;
             alertBox.style.display = 'flex';
             
-            // Close alert when clicking the X button
-            document.querySelector('.close-btn').addEventListener('click', function() {
+            // Close alert when clicking the button
+            alertButton.addEventListener('click', function() {
                 alertBox.style.display = 'none';
             });
             
@@ -332,12 +348,105 @@
                     alertBox.style.display = 'none';
                 }
             });
-            
-            // Close alert after 5 seconds
-            setTimeout(function() {
-                alertBox.style.display = 'none';
-            }, 5000);
         }
+
+        // Field error function
+        function showFieldError(message, inputElement) {
+            const errorBox = document.getElementById('fieldError');
+            const errorMessage = document.getElementById('fieldErrorMessage');
+            
+            // Position the error message
+            const inputRect = inputElement.getBoundingClientRect();
+            errorBox.style.top = `${inputRect.bottom + window.scrollY + 10}px`;
+            errorBox.style.left = `${inputRect.left + window.scrollX}px`;
+            
+            errorMessage.textContent = message;
+            errorBox.style.display = 'block';
+            
+            // Focus on the input field
+            inputElement.focus();
+            
+            // Hide the error message after 3 seconds
+            setTimeout(function() {
+                errorBox.style.display = 'none';
+            }, 3000);
+        }
+
+        // Form submission handling
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Show loading state
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+
+            // Get form values with trim to remove whitespace
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // Basic validation
+            if (!name) {
+                showFieldError('Please fill out this field.', document.getElementById('name'));
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+                return;
+            } else if (!email) {
+                showFieldError('Please fill out this field.', document.getElementById('email'));
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+                return;
+            } else if (!isValidEmail(email)) {
+                showFieldError('Please enter a valid email address.', document.getElementById('email'));
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+                return;
+            } else if (!subject) {
+                showFieldError('Please fill out this field.', document.getElementById('subject'));
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+                return;
+            } else if (!message) {
+                showFieldError('Please fill out this field.', document.getElementById('message'));
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+                return;
+            }
+
+            // Add this email validation function above your event listeners:
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+
+            // Send email using EmailJS
+            emailjs.send("service_pwlzz7e", "template_kftenxg", {
+                subject: subject,
+                name: name,
+                email: email,
+                message: message,
+                date: new Date().toLocaleString(),
+                reply_to: email,
+            })
+            .then(function() {
+                showCustomAlert('Thank you!\n\nI will get in touch to you soon.', 'success');
+                contactForm.reset();
+            })
+            .catch(function(error) {
+                console.error('Email error:', error);
+                showCustomAlert('Something went wrong. Please try again or contact me directly.', 'error');
+            })
+            .finally(function() {
+                // Reset button state
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+            });
+        });
+
         // Mobile Menu Toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
@@ -375,54 +484,7 @@
             });
         });
         
-        // Form submission handling
-        const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-    
-        // Show loading state
-        const submitButton = this.querySelector('button[type="submit"]');
-        const originalButtonText = submitButton.textContent;
-        submitButton.textContent = 'Sending...';
-        submitButton.disabled = true;
-    
-        // Get form values with trim to remove whitespace
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const subject = document.getElementById('subject').value.trim();
-        const message = document.getElementById('message').value.trim();
-    
-        // Basic validation
-        if (!name || !email || !subject || !message) {
-            showCustomAlert('Please fill in all the fields');
-            submitButton.textContent = originalButtonText;
-            submitButton.disabled = false;
-            return;
-        }
-    
-        // Send email using EmailJS
-        emailjs.send("service_pwlzz7e", "template_kftenxg", {
-        subject: subject,
-        name: name,
-        email: email,
-        message: message,
-        date: new Date().toLocaleString(),
-        reply_to: email,
-    })
-    .then(function() {
-        showCustomAlert('Thank you for your message! I will get back to you soon.');
-        contactForm.reset();
-    })
-    .catch(function(error) {
-        console.error('Email error:', error);
-        showCustomAlert('Something went wrong. Please try again or contact me directly at svidhaji@outlook.com');
-    })
-    .finally(function() {
-        // Reset button state
-        submitButton.textContent = originalButtonText;
-        submitButton.disabled = false;
-    });
-});
+        
     </script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- Custom Script for Typing Effect -->
@@ -448,9 +510,15 @@
 <!-- Custom Alert -->
 <div class="custom-alert" id="customAlert">
     <div class="alert-content">
-        <span class="close-btn">&times;</span>
+        <div id="alertIcon"></div>
         <p id="alertMessage"></p>
+        <button id="alertButton" class="alert-button">OK</button>
     </div>
+</div>
+
+<!-- Field Error Alert -->
+<div class="field-error" id="fieldError">
+    <span id="fieldErrorMessage">Please fill out this field.</span>
 </div>
 
 </body>
