@@ -241,69 +241,79 @@
     </section>
     
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Contact information</h3>
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>svidhaji@outlook.com</p>
-                        </div>
+<section id="contact" class="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-container">
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <h4>Location</h4>
-                            <p>Espoo, Suomi</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+(358) 414805752</p>
-                        </div>
+                    <div>
+                        <h4>Email</h4>
+                        <a href="mailto:svidhaji@outlook.com" class="contact-link">svidhaji@outlook.com</a>
                     </div>
                 </div>
-                <h3>Follow Me</h3>
-                <div class="social-links">
-                    <a href="https://github.com/svidhaji" class="social-icon"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/said-haji-512b18158/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Espoo, Finland</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div>
+                        <h4>Phone</h4>
+                        <a href="tel:+358414805752" class="contact-link">+(358) 414805752</a>
+                    </div>
                 </div>
             </div>
-            <div class="contact-form">
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Name*</label>
-                        <input type="text" id="name" class="form-control" placeholder="Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email*</label>
-                        <input type="email" id="email" class="form-control" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject*</label>
-                        <input type="text" id="subject" class="form-control" placeholder="Subject">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message*</label>
-                        <textarea id="message" class="form-control" placeholder="Your Message"></textarea>
-                    </div>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
+            <h3>Connect With Me</h3>
+            <div class="social-links">
+                <a href="https://github.com/svidhaji" class="social-icon" aria-label="GitHub Profile" title="GitHub Profile"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/said-haji-512b18158/" class="social-icon" aria-label="LinkedIn Profile" title="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://twitter.com/" class="social-icon" aria-label="Twitter Profile" title="Twitter Profile"><i class="fab fa-twitter"></i></a>
+                <a href="https://dev.to/" class="social-icon" aria-label="Dev.to Profile" title="Dev.to Profile"><i class="fab fa-dev"></i></a>
             </div>
         </div>
-    </section>
+        <div class="contact-form">
+            <form id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name<span class="required">*</span></label>
+                        <input type="text" id="name" class="form-control" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address<span class="required">*</span></label>
+                        <input type="email" id="email" class="form-control" placeholder="Your email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject<span class="required">*</span></label>
+                    <input type="text" id="subject" class="form-control" placeholder="What is this regarding?" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message<span class="required">*</span></label>
+                    <textarea id="message" class="form-control" placeholder="Tell me more about your project, needs, or questions" rows="6" required></textarea>
+                </div>
+                <div class="form-footer">
+                    <p class="form-disclaimer">I'll respond to your message within 48 hours.</p>
+                    <button type="submit" class="btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
     
     <!-- Footer -->
     <footer>
@@ -372,80 +382,142 @@
             }, 3000);
         }
 
-        // Form submission handling
+        // Enhanced form handling with better validation and feedback
+        document.addEventListener('DOMContentLoaded', function() {
         const contactForm = document.getElementById('contactForm');
+    
+        if (contactForm) {
+        // Input field validation with real-time feedback
+        const formFields = contactForm.querySelectorAll('.form-control');
+        
+        formFields.forEach(field => {
+            field.addEventListener('blur', function() {
+                validateField(this);
+            });
+            
+            field.addEventListener('focus', function() {
+                // Remove error messages when field gets focus
+                const errorElement = this.parentElement.querySelector('.field-error-message');
+                if (errorElement) {
+                    errorElement.remove();
+                }
+                this.classList.remove('invalid');
+            });
+        });
+        
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-
+            
+            // Validate all fields
+            let isValid = true;
+            formFields.forEach(field => {
+                if (!validateField(field)) {
+                    isValid = false;
+                }
+            });
+            
+            if (!isValid) {
+                return false;
+            }
+            
             // Show loading state
             const submitButton = this.querySelector('button[type="submit"]');
-            const originalButtonText = submitButton.textContent;
-            submitButton.textContent = 'Sending...';
+            const originalButtonText = submitButton.innerHTML;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitButton.disabled = true;
-
-            // Get form values with trim to remove whitespace
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const subject = document.getElementById('subject').value.trim();
-            const message = document.getElementById('message').value.trim();
-
-            // Basic validation
-            if (!name) {
-                showFieldError('Please fill out this field.', document.getElementById('name'));
-                submitButton.textContent = originalButtonText;
-                submitButton.disabled = false;
-                return;
-            } else if (!email) {
-                showFieldError('Please fill out this field.', document.getElementById('email'));
-                submitButton.textContent = originalButtonText;
-                submitButton.disabled = false;
-                return;
-            } else if (!isValidEmail(email)) {
-                showFieldError('Please enter a valid email address.', document.getElementById('email'));
-                submitButton.textContent = originalButtonText;
-                submitButton.disabled = false;
-                return;
-            } else if (!subject) {
-                showFieldError('Please fill out this field.', document.getElementById('subject'));
-                submitButton.textContent = originalButtonText;
-                submitButton.disabled = false;
-                return;
-            } else if (!message) {
-                showFieldError('Please fill out this field.', document.getElementById('message'));
-                submitButton.textContent = originalButtonText;
-                submitButton.disabled = false;
-                return;
-            }
-
-            // Add this email validation function above your event listeners:
-            function isValidEmail(email) {
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                return emailRegex.test(email);
-            }
-
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value.trim(),
+                email: document.getElementById('email').value.trim(),
+                subject: document.getElementById('subject').value.trim(),
+                message: document.getElementById('message').value.trim(),
+                date: new Date().toLocaleString()
+            };
+            
             // Send email using EmailJS
             emailjs.send("service_pwlzz7e", "template_kftenxg", {
-                subject: subject,
-                name: name,
-                email: email,
-                message: message,
-                date: new Date().toLocaleString(),
-                reply_to: email,
+                subject: formData.subject,
+                name: formData.name,
+                email: formData.email,
+                message: formData.message,
+                date: formData.date,
+                reply_to: formData.email,
             })
             .then(function() {
-                showCustomAlert('Thank you!\n\nI will get in touch to you soon.', 'success');
-                contactForm.reset();
+                // Replace form with success message
+                contactForm.innerHTML = `
+                    <div class="form-success-message" style="display:block;">
+                        <div class="form-success-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3 class="form-success-text">Message Sent Successfully!</h3>
+                        <p class="form-success-subtext">Thank you for reaching out. I'll get back to you within 48 hours.</p>
+                    </div>
+                `;
             })
             .catch(function(error) {
                 console.error('Email error:', error);
                 showCustomAlert('Something went wrong. Please try again or contact me directly.', 'error');
-            })
-            .finally(function() {
+                
                 // Reset button state
-                submitButton.textContent = originalButtonText;
+                submitButton.innerHTML = originalButtonText;
                 submitButton.disabled = false;
             });
         });
+        
+        // Field validation function
+        function validateField(field) {
+            const value = field.value.trim();
+            let isValid = true;
+            let errorMessage = '';
+            
+            // Remove existing error message
+            const existingError = field.parentElement.querySelector('.field-error-message');
+            if (existingError) {
+                existingError.remove();
+            }
+            
+            // Basic validations
+            if (field.required && value === '') {
+                isValid = false;
+                errorMessage = 'This field is required';
+            } else if (field.type === 'email' && value !== '') {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(value)) {
+                    isValid = false;
+                    errorMessage = 'Please enter a valid email address';
+                }
+            }
+            
+            // Additional validations
+            if (field.id === 'name' && value.length < 2 && value !== '') {
+                isValid = false;
+                errorMessage = 'Name should be at least 2 characters';
+            } else if (field.id === 'subject' && value.length < 3 && value !== '') {
+                isValid = false;
+                errorMessage = 'Subject should be at least 3 characters';
+            } else if (field.id === 'message' && value.length < 10 && value !== '') {
+                isValid = false;
+                errorMessage = 'Please provide a more detailed message';
+            }
+            
+            // Display error message if validation fails
+            if (!isValid) {
+                field.classList.add('invalid');
+                
+                const errorElement = document.createElement('div');
+                errorElement.className = 'field-error-message';
+                errorElement.innerHTML = `<i class="fas fa-exclamation-circle"></i> ${errorMessage}`;
+                field.parentElement.appendChild(errorElement);
+            } else {
+                field.classList.remove('invalid');
+            }
+            
+            return isValid;
+        }
+    }
+});
 
         // Mobile Menu Toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
