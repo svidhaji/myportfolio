@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>SH Portfolio</title>
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
@@ -38,8 +38,21 @@
     <!-- Navigation -->
 <nav>
     <div class="logo">
-        <i class="fas fa-code"></i> <!-- This adds a code icon before your name -->
-        <span>Said Haji</span>
+        <div class="logo-container">
+            <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <!-- Background circle -->
+                <rect width="100" height="100" rx="0" fill="#4a90e2" />
+                
+                <!-- Stylized "SH" based on your image -->
+                <path d="M20,35 C20,25 28,20 36,20 C48,20 52,30 50,37 C48,44 40,45 32,45 
+                         C26,45 26,48 26,50 C26,53 28,55 32,55 C36,55 38,53 39,51
+                         M50,25 C50,20 56,20 60,20 C74,20 80,30 80,50 C80,70 70,80 60,80 
+                         C54,80 50,77 50,72 M50,50 L75,50" 
+                      stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none" 
+                      class="logo-path" />
+            </svg>
+        </div>
+        <span class="logo-text">Said Haji</span>
     </div>
     <div class="nav-links">
         <a href="#home">Home</a>
@@ -47,6 +60,7 @@
         <a href="#projects">Projects</a>
         <a href="#blog">Blog</a>
         <a href="#contact">Contact</a>
+        <a href="#" id="help-link">Help</a>
     </div>
     <button class="mobile-menu-btn">
         <i class="fas fa-bars"></i>
@@ -57,15 +71,15 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Hi, I'm <span id="typed-name" style="color: var(--primary-color);"></span></h1>
-            <h2>Mobile Developer / Student</h2>
-            <p>I build exceptional and accessible digital experiences for the web. Specializing in creating applications with modern technologies including React, Flutter, Android, SQL, Node.js, and Firebase.</p>
-            <div>
+            <h2>Mobile Developer</h2>
+            <p>I build exceptional and accessible digital experiences for the web. Specializing in creating cross-platform applications with modern technologies including React, Flutter, Android, SQL, Node.js, and Firebase.</p>
+            <div class="hero-buttons">
                 <a href="#projects" class="btn">View My Work</a>
                 <a href="#contact" class="btn btn-outline">Contact Me</a>
             </div>
         </div>
         <div class="hero-image">
-            <img src="images/cvimg.jpg" alt="Image">
+            <img src="images/cvkuva.jpg" alt="Image">
         </div>
         <!-- Scroll down indicator -->
         <div class="scroll-indicator">
@@ -81,7 +95,7 @@
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
             <div class="about-text">
-                <h3 class="about-title">Hi there! Here's a little story about me..</h3>
+                <h3 class="about-title">Who I Am & What I Do</h3>
                 <p>I'm a passionate developer with experience in building responsive web applications. My journey into coding started when I was in college, where I discovered my love for creating things that live on the internet.</p>
                 <p>With a background in computer science, I've developed a strong foundation in software engineering principles and best practices. I enjoy solving complex problems and turning ideas into reality through clean, efficient code.</p>
                 <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge through technical articles.</p>
@@ -205,40 +219,62 @@
     </section>
     
     <!-- Blog Section -->
-    <section id="blog" class="blog">
-        <h2 class="section-title">Latest Articles</h2>
-        <div class="blog-grid">
-            <div class="article-card">
-                <img src="images/firebaseauth.png" alt="Firebase Authentication" class="article-img">
-                <div class="article-content">
-                    <h3 class="article-title">Firebase Authentication: A Comprehensive Guide</h3>
-                    <p class="article-date">January 15, 2023</p>
-                    <p class="article-excerpt">Learn how to implement secure user authentication in your web applications using Firebase Authentication services.</p>
-                    <a href="https://firebase.google.com/docs/auth/web/start" class="btn" target="_blank">Read More</a>
-                </div>
-            </div>
-            
-            <div class="article-card">
-                <img src="images/tech.jpg" alt="Responsive UI Design" class="article-img">
-                <div class="article-content">
-                    <h3 class="article-title">Building Responsive UIs with Modern CSS</h3>
-                    <p class="article-date">March 8, 2023</p>
-                    <p class="article-excerpt">Explore advanced CSS techniques for creating fluid, responsive interfaces that work across all device sizes.</p>
-                    <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design" class="btn" target="_blank">Read More</a>
-                </div>
-            </div>
-            
-            <div class="article-card">
-                <img src="images/coding.jpg" alt="React State Management" class="article-img">
-                <div class="article-content">
-                    <h3 class="article-title">State Management Patterns in React Applications</h3>
-                    <p class="article-date">June 22, 2023</p>
-                    <p class="article-excerpt">A comparison of different state management approaches in React, from Context API to Redux and beyond.</p>
-                    <a href="https://react.dev/learn/managing-state" class="btn" target="_blank">Read More</a>
-                </div>
+<section id="blog" class="blog">
+    <h2 class="section-title">Latest Articles</h2>
+    <div class="blog-grid">
+        <div class="article-card">
+            <img src="images/firebaseauth.png" alt="Firebase Authentication" class="article-img">
+            <div class="article-content">
+                <h3 class="article-title">Firebase Authentication: A Comprehensive Guide</h3>
+                <p class="article-date">January 15, 2023</p>
+                <p class="article-excerpt">Learn how to implement secure user authentication in your web applications using Firebase Authentication services.</p>
+                <a href="https://firebase.google.com/docs/auth/web/start" class="btn" target="_blank">Read More</a>
             </div>
         </div>
-    </section>
+        
+        <div class="article-card">
+            <img src="images/tech.jpg" alt="Responsive UI Design" class="article-img">
+            <div class="article-content">
+                <h3 class="article-title">Building Responsive UIs with Modern CSS</h3>
+                <p class="article-date">March 8, 2023</p>
+                <p class="article-excerpt">Explore advanced CSS techniques for creating fluid, responsive interfaces that work across all device sizes.</p>
+                <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design" class="btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        
+        <div class="article-card">
+            <img src="images/coding.jpeg" alt="React State Management" class="article-img">
+            <div class="article-content">
+                <h3 class="article-title">State Management Patterns in React Applications</h3>
+                <p class="article-date">June 22, 2023</p>
+                <p class="article-excerpt">A comparison of different state management approaches in React, from Context API to Redux and beyond.</p>
+                <a href="https://react.dev/learn/managing-state" class="btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        
+        <!-- New Docker Article -->
+        <div class="article-card">
+            <img src="images/docker.jpeg" alt="Docker for Web Developers" class="article-img">
+            <div class="article-content">
+                <h3 class="article-title">Docker for Web Developers: A Practical Guide</h3>
+                <p class="article-date">September 15, 2023</p>
+                <p class="article-excerpt">Learn how to containerize your web applications for consistent development and deployment environments. From basic concepts to multi-container setups.</p>
+                <a href="https://docs.docker.com/get-started/" class="btn" target="_blank">Read More</a>
+            </div>
+        </div>
+        
+        <!-- New TypeScript Article -->
+        <div class="article-card">
+            <img src="images/typescript.jpeg" alt="Mastering TypeScript" class="article-img">
+            <div class="article-content">
+                <h3 class="article-title">Mastering TypeScript in 2023: Beyond the Basics</h3>
+                <p class="article-date">November 3, 2023</p>
+                <p class="article-excerpt">Explore advanced TypeScript features and patterns that improve code quality and developer experience. From utility types to effective error handling.</p>
+                <a href="https://www.typescriptlang.org/docs/" class="btn" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>
     
     <!-- Contact Section -->
 <section id="contact" class="contact">
@@ -304,7 +340,7 @@
                     <textarea id="message" class="form-control" placeholder="Tell me more about your project, needs, or questions" rows="6" required></textarea>
                 </div>
                 <div class="form-footer">
-                    <p class="form-disclaimer">I'll respond to your message within 48 hours.</p>
+                    <p class="form-disclaimer">I'll respond to your message within 24 hours.</p>
                     <button type="submit" class="btn">
                         <span>Send Message</span>
                         <i class="fas fa-paper-plane"></i>
@@ -325,6 +361,7 @@
                 <a href="#projects">Projects</a>
                 <a href="#blog">Blog</a>
                 <a href="#contact">Contact</a>
+                <a href="#" id="help-link-footer">Help</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -333,6 +370,68 @@
     </footer>
     
     <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    
+    // Create overlay element
+    const overlay = document.createElement('div');
+    overlay.className = 'menu-overlay';
+    document.body.appendChild(overlay);
+    
+    function toggleMenu() {
+        navLinks.classList.toggle('active');
+        mobileMenuBtn.classList.toggle('active');
+        overlay.classList.toggle('active');
+        
+        // Toggle icon
+        const icon = mobileMenuBtn.querySelector('i');
+        if (navLinks.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+            document.body.style.overflow = 'hidden';
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+            document.body.style.overflow = '';
+        }
+    }
+    
+    // Function to handle smooth scrolling
+    function smoothScroll(target) {
+        const element = document.querySelector(target);
+        if (element) {
+            // Close mobile menu if open
+            if (navLinks.classList.contains('active')) {
+                toggleMenu();
+            }
+            
+            // Smooth scroll to the target section
+            element.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    }
+    
+    // Add click event listeners to all navigation links
+    const allNavLinks = document.querySelectorAll('.nav-links a, .footer-links a');
+    allNavLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Check if the link is a section link (starts with #)
+            if (link.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                smoothScroll(targetId);
+            }
+        });
+    });
+    
+    // Mobile menu toggle events
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+    });
+
         // Custom alert function
         function showCustomAlert(message, type = 'success') {
             const alertBox = document.getElementById('customAlert');
@@ -435,36 +534,57 @@
                 date: new Date().toLocaleString()
             };
             
-            // Send email using EmailJS
-            emailjs.send("service_pwlzz7e", "template_kftenxg", {
+            // First email - send to yourself
+            const mainEmailPromise = emailjs.send("service_pwlzz7e", "template_kftenxg", {
                 subject: formData.subject,
                 name: formData.name,
                 email: formData.email,
                 message: formData.message,
                 date: formData.date,
                 reply_to: formData.email,
-            })
-            .then(function() {
-                // Replace form with success message
-                contactForm.innerHTML = `
-                    <div class="form-success-message" style="display:block;">
-                        <div class="form-success-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <h3 class="form-success-text">Message Sent Successfully!</h3>
-                        <p class="form-success-subtext">Thank you for reaching out. I'll get back to you within 48 hours.</p>
-                    </div>
-                `;
-            })
-            .catch(function(error) {
-                console.error('Email error:', error);
-                showCustomAlert('Something went wrong. Please try again or contact me directly.', 'error');
-                
-                // Reset button state
-                submitButton.innerHTML = originalButtonText;
-                submitButton.disabled = false;
             });
-        });
+            
+            // Second email - auto-reply to the sender
+            // Second email - auto-reply to the sender
+            const autoReplyPromise = emailjs.send("service_pwlzz7e", "template_3d3v38p", {
+                to_name: formData.name,
+                to_email: formData.email,  // This sends the auto-reply to the form submitter
+                subject: formData.subject,
+                email: formData.email,
+                reply_to: "svidhaji@outlook.com" // Replace with your actual email
+            });
+            
+            // Use Promise.all to wait for both emails to be sent
+            Promise.all([mainEmailPromise, autoReplyPromise])
+                .then(function() {
+                    // Replace form with success message
+                    contactForm.innerHTML = `
+                        <div class="form-success-message">
+                            <div class="form-success-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h3 class="form-success-text">Message Sent Successfully!</h3>
+                            <p class="form-success-subtext">Thank you for reaching out. I'll get back to you within 24 hours.</p>
+                            <p class="form-success-subtext">A confirmation email has been sent to your inbox.</p>
+                            <button id="closeSuccessBtn" class="close-success-btn">Close</button>
+                        </div>
+                    `;
+
+                    // Add event listener to close button
+                    document.getElementById('closeSuccessBtn').addEventListener('click', function() {
+                        // Reset the form to its original state or redirect user
+                        window.location.reload(); // Simple solution to reset everything
+                    });
+                })
+                .catch(function(error) {
+                    console.error('Email error:', error);
+                    showCustomAlert('Something went wrong. Please try again or contact me directly.', 'error');
+                    
+                    // Reset button state
+                    submitButton.innerHTML = originalButtonText;
+                    submitButton.disabled = false;
+                });
+            });
         
         // Field validation function
         function validateField(field) {
@@ -518,58 +638,27 @@
         }
     }
 });
-
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            
-            // Change icon based on menu state
-            const icon = mobileMenuBtn.querySelector('i');
-            if (navLinks.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                  icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-        
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Close mobile menu if open
-                if (navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                    const icon = mobileMenuBtn.querySelector('i');
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-        
-        
     </script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- Custom Script for Typing Effect -->
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        new Typed("#typed-name", {
-            strings: ["Said Haji.", "a Mobile Developer.", " a Student.", "a Tech Enthusiast."],
-            typeSpeed: 80,
-            backSpeed: 40,
-            backDelay: 1500,
-            loop: true
-        });
+    new Typed("#typed-name", {
+        strings: ["Said Haji.", "a Mobile Developer.", "a Problem Solver.", "a Tech Enthusiast."],
+        typeSpeed: 100,
+        backSpeed: 70,
+        backDelay: 1000,
+        loop: false,
+        showCursor: false,  // Hide cursor after completion
+        onComplete: function(self) {
+            // Remove the cursor element completely after typing is done
+            const cursor = document.querySelector('.typed-cursor');
+            if (cursor) {
+                cursor.remove();
+            }
+        }
     });
+});
 </script>
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -593,5 +682,496 @@
     <span id="fieldErrorMessage">Please fill out this field.</span>
 </div>
 
-</body>
+
+<script>
+// GA4 Custom Event Tracking
+document.addEventListener('DOMContentLoaded', function() {
+    // Helper function to safely track events
+    function trackEvent(eventName, params) {
+        if (typeof gtag === 'function') {
+            gtag('event', eventName, params);
+            console.log(`Event tracked: ${eventName}`, params);
+        } else {
+            console.log(`GA not loaded - ${eventName} not tracked`);
+        }
+    }
+
+    // Track contact form submissions
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function() {
+            trackEvent('form_submission', {
+                'form_name': 'contact'
+            });
+        });
+    }
+
+    // Track project clicks
+    const projectLinks = document.querySelectorAll('.project-links a');
+    projectLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const projectTitle = this.closest('.project-content, .featured-content').querySelector('.project-title').textContent;
+            trackEvent('project_click', {
+                'project_name': projectTitle
+            });
+        });
+    });
+
+    // Track CV downloads
+    const cvDownloadLink = document.querySelector('a[href*="saidhajicv.pdf"]');
+    if (cvDownloadLink) {
+        cvDownloadLink.addEventListener('click', function() {
+            trackEvent('cv_download', {});
+        });
+    }
+
+    // Track blog article views
+    const blogSection = document.getElementById('blog');
+    if (blogSection) {
+        const blogObserver = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                trackEvent('page_view', {
+                    'page_title': 'Blog Section',
+                    'page_location': window.location.href + '#blog'
+                });
+                blogObserver.unobserve(blogSection);
+            }
+        });
+        blogObserver.observe(blogSection);
+    }
+
+    // Track individual article clicks
+    const articleLinks = document.querySelectorAll('.article-card .btn');
+    articleLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const articleTitle = this.closest('.article-content').querySelector('.article-title').textContent;
+            trackEvent('article_click', {
+                'article_title': articleTitle
+            });
+        });
+    });
+
+    // Track skill category views with scroll tracking
+    const skillCategories = document.querySelectorAll('.skill-category');
+    const skillObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const skillCategory = entry.target.querySelector('h3').textContent;
+                trackEvent('skill_category_view', {
+                    'category_name': skillCategory
+                });
+                skillObserver.unobserve(entry.target); // Track only once
+            }
+        });
+    }, { threshold: 0.7 }); // 70% visibility required
+
+    skillCategories.forEach(category => {
+        skillObserver.observe(category);
+    });
+});
+</script>
+
+
+<!-- Cookie Consent Banner -->
+<div id="cookieConsent" style="display: none; position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 1200px; margin: 0 auto; background-color: rgba(33, 33, 33, 0.95); color: #f8f8f8; padding: 16px 24px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); z-index: 9999; font-size: 14px; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.1);">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <div style="font-size: 20px; color: #4285f4;">
+          <i class="fas fa-cookie-bite"></i>
+        </div>
+        <p style="margin: 0; line-height: 1.5;">This website uses cookies to enhance your browsing experience and analyze site traffic.
+          <a href="https://gdpr.eu/cookies/" target="_blank" style="color: #4285f4; text-decoration: none; border-bottom: 1px dotted #4285f4; font-weight: 500;">Learn more</a>
+        </p>
+      </div>
+      <div style="display: flex; gap: 12px;">
+        <button id="cookieReject" style="background-color: transparent; color: #e0e0e0; border: 1px solid rgba(255,255,255,0.3); padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 500; transition: all 0.2s ease; font-size: 14px;">Reject Non-Essential</button>
+        <button id="cookieAccept" style="background-color: #4285f4; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 500; transition: all 0.2s ease; font-size: 14px; box-shadow: 0 2px 5px rgba(66, 133, 244, 0.3);">Accept All Cookies</button>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    // Cookie consent management
+    document.addEventListener('DOMContentLoaded', function() {
+      const cookieConsent = document.getElementById('cookieConsent');
+      const cookieAccept = document.getElementById('cookieAccept');
+      const cookieReject = document.getElementById('cookieReject');
+      
+      // Check if consent was already given
+      const consentGiven = localStorage.getItem('cookieConsent');
+      
+      // Function to load analytics scripts
+      function loadAnalytics() {
+        // Google Analytics
+        const gaScript = document.createElement('script');
+        gaScript.async = true;
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-XYSKTS0B0C';
+        document.head.appendChild(gaScript);
+        
+        const gaInit = document.createElement('script');
+        gaInit.innerHTML = `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XYSKTS0B0C');
+        `;
+        document.head.appendChild(gaInit);
+        
+        // Microsoft Clarity
+        const clarityScript = document.createElement('script');
+        clarityScript.innerHTML = `
+          (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "qifnc38x0d");
+        `;
+        document.head.appendChild(clarityScript);
+        
+        console.log('Analytics loaded');
+      }
+      
+      if (consentGiven === 'accepted') {
+        // If consent was previously given, load analytics
+        loadAnalytics();
+      } else if (consentGiven === null) {
+        // Show banner if no decision has been made yet
+        setTimeout(function() {
+          cookieConsent.style.display = 'block';
+        }, 1000); // Delay banner appearance for 1 second
+      }
+      
+      // Handle accept button click
+      cookieAccept.addEventListener('click', function() {
+        localStorage.setItem('cookieConsent', 'accepted');
+        cookieConsent.style.display = 'none';
+        loadAnalytics();
+      });
+      
+      // Handle reject button click
+      cookieReject.addEventListener('click', function() {
+        localStorage.setItem('cookieConsent', 'rejected');
+        cookieConsent.style.display = 'none';
+        // Don't load analytics scripts
+      });
+    });
+  </script>
+
+<script>
+    // CHATBOT FUNCTIONALITY
+    function setupKeyboardHandling() {
+  const chatbotContainer = document.querySelector('.chatbot-container');
+  const originalWindowHeight = window.innerHeight;
+  
+  window.addEventListener('resize', function() {
+    // If window height is significantly reduced, keyboard is likely open
+    if (window.innerHeight < originalWindowHeight * 0.75) {
+      chatbotContainer.classList.add('keyboard-open');
+    } else {
+      chatbotContainer.classList.remove('keyboard-open');
+    }
+  });
+  
+  // Also focus management for better UX
+  const inputField = document.getElementById('chatbot-input-field');
+  if (inputField) {
+    inputField.addEventListener('focus', function() {
+      // Scroll the messages container to bottom when input is focused
+      setTimeout(function() {
+        const messagesContainer = document.getElementById('chatbot-messages');
+        if (messagesContainer) {
+          messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+      }, 300);
+    });
+  }
+}
+
+// Function to manage chatbot visibility on mobile
+function manageChatbotVisibility(show) {
+  const chatbotContainer = document.querySelector('.chatbot-container');
+  if (!chatbotContainer) return;
+  
+  if (window.innerWidth <= 576) {
+    if (show) {
+      // Show the chatbot
+      chatbotContainer.style.display = 'flex';
+      chatbotContainer.style.visibility = 'visible';
+      chatbotContainer.style.opacity = '1';
+      chatbotContainer.style.transform = 'translateY(0)';
+      chatbotContainer.classList.add('open');
+    } else {
+      // Hide the chatbot
+      chatbotContainer.style.display = 'none';
+      chatbotContainer.style.visibility = 'hidden';
+      chatbotContainer.style.opacity = '0';
+      chatbotContainer.style.transform = 'translateY(200vh)';
+      chatbotContainer.classList.remove('open');
+    }
+  }
+}
+
+    // Help link to open chatbot
+document.addEventListener('DOMContentLoaded', function() {
+    // Initially hide the chatbot on mobile
+    manageChatbotVisibility(false);
+    window.addEventListener('resize', function() {
+        // Keep it hidden on resize unless it's already open
+        const chatbotContainer = document.querySelector('.chatbot-container');
+        manageChatbotVisibility(chatbotContainer?.classList.contains('open') || false);
+    });
+    // First, let's ensure the chatbot elements exist in the DOM
+    const body = document.querySelector('body');
+    
+    // Create chatbot container if it doesn't exist
+    let chatbotContainer = document.querySelector('.chatbot-container');
+    if (!chatbotContainer) {
+        chatbotContainer = document.createElement('div');
+        chatbotContainer.className = 'chatbot-container';
+
+         // Add close button in top left
+        const closeButton = document.createElement('button');
+        closeButton.className = 'chatbot-close-btn';
+        closeButton.innerHTML = '<i class="fas fa-times"></i>';
+        closeButton.addEventListener('click', function() {
+        chatbotContainer.classList.remove('open');
+        manageChatbotVisibility(false);
+    });
+    chatbotContainer.appendChild(closeButton);
+        
+        // Create message container
+        const messagesContainer = document.createElement('div');
+        messagesContainer.id = 'chatbot-messages';
+        messagesContainer.className = 'chatbot-messages';
+        chatbotContainer.appendChild(messagesContainer);
+        
+        // Create input area
+        const inputArea = document.createElement('div');
+        inputArea.className = 'chatbot-input';
+        
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.id = 'chatbot-input-field';
+        input.placeholder = 'Ask me anything...';
+        
+        const sendButton = document.createElement('button');
+        sendButton.id = 'chatbot-send';
+        sendButton.innerHTML = '<i class="fas fa-paper-plane"></i>';
+        
+        inputArea.appendChild(input);
+        inputArea.appendChild(sendButton);
+        chatbotContainer.appendChild(inputArea);
+        
+        // Add chatbot toggle button
+        const toggleButton = document.createElement('button');
+        toggleButton.className = 'chatbot-toggle';
+        toggleButton.id = 'chatbot-toggle';
+        toggleButton.innerHTML = `
+            <span class="open">
+                <i class="fas fa-comment-dots"></i>
+            </span>
+            <span class="close">
+                <i class="fas fa-times"></i>
+            </span>
+        `;
+        
+        // Add elements to body
+        body.appendChild(chatbotContainer);
+        body.appendChild(toggleButton);
+        
+        // Set up toggle functionality
+        toggleButton.addEventListener('click', function() {
+            chatbotContainer.classList.toggle('open');
+            manageChatbotVisibility(chatbotContainer.classList.contains('open'));
+            if (chatbotContainer.classList.contains('open') && messagesContainer.children.length === 0) {
+                // Add welcome message
+                const messageDiv = document.createElement('div');
+                messageDiv.classList.add('message', 'bot');
+                messageDiv.textContent = "Hi there!  How can I help you today?";
+                messagesContainer.appendChild(messageDiv);
+            }
+        });
+        
+        // Set up send functionality
+        sendButton.addEventListener('click', sendMessage);
+        input.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+        
+        function sendMessage() {
+            const message = input.value.trim();
+            if (message) {
+                // Add user message
+                const userMsg = document.createElement('div');
+                userMsg.classList.add('message', 'user');
+                userMsg.textContent = message;
+                messagesContainer.appendChild(userMsg);
+                
+                // Clear input
+                input.value = '';
+                
+                // Simulate typing
+                const typingIndicator = document.createElement('div');
+                typingIndicator.classList.add('typing-indicator');
+                typingIndicator.innerHTML = '<span></span><span></span><span></span>';
+                messagesContainer.appendChild(typingIndicator);
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                
+                // Simulate response
+                setTimeout(() => {
+                    typingIndicator.remove();
+                    
+                    // Add bot response
+                    const botMsg = document.createElement('div');
+                    botMsg.classList.add('message', 'bot');
+                    botMsg.textContent = getBotResponse(message);
+                    messagesContainer.appendChild(botMsg);
+                    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                }, 1000 + Math.random() * 1000);
+            }
+        }
+        
+        function getBotResponse(message) {
+        message = message.toLowerCase();
+    
+    // Greetings
+    if (message.includes('hello') || message.includes('hi') || message.includes('hey') || 
+        message.includes('greetings') || message.includes('howdy') || 
+        message.includes('what\'s up')) {
+        return "Hello! I'm Said's chatbot. How can I help you today?";
+    } 
+    // Projects and work
+    else if (message.includes('project') || message.includes('work') || 
+             message.includes('portfolio') || message.includes('showcase') || 
+             message.includes('app') || message.includes('application') || 
+             message.includes('build') || message.includes('made') || 
+             message.includes('create') || message.includes('developed')) {
+        return "Said has several projects including Exelo Business Management app and a Public Transport App. Check out the Projects section for more details!";
+    } 
+    // Contact information
+    else if (message.includes('contact') || message.includes('email') || 
+             message.includes('phone') || message.includes('reach') || 
+             message.includes('hire') || message.includes('call') || 
+             message.includes('talk') || message.includes('message') || 
+             message.includes('connect')) {
+        return "You can contact Said via email at svidhaji@outlook.com or fill out the contact form on this website.";
+    } 
+    // Skills and technologies
+    else if (message.includes('skill') || message.includes('technology') || 
+             message.includes('tech') || message.includes('programming') || 
+             message.includes('language') || message.includes('framework') || 
+             message.includes('tool') || message.includes('code') || 
+             message.includes('develop') || message.includes('stack') || 
+             message.includes('react') || message.includes('flutter') || 
+             message.includes('javascript') || message.includes('node')) {
+        return "Said is skilled in frontend technologies like React, Flutter, and backend technologies like Node.js, Express, Firebase and SQL.";
+    } 
+    // Experience and background
+    else if (message.includes('experience') || message.includes('background') || 
+             message.includes('history') || message.includes('education') || 
+             message.includes('degree') || message.includes('school') || 
+             message.includes('university') || message.includes('study') || 
+             message.includes('learn') || message.includes('career')) {
+        return "Said has a background in computer science and has been developing software professionally for several years. He's passionate about creating efficient, user-friendly applications.";
+    }
+    // Location and availability
+    else if (message.includes('where') || message.includes('location') || 
+             message.includes('based') || message.includes('from') || 
+             message.includes('country') || message.includes('city') || 
+             message.includes('available') || message.includes('remote')) {
+        return "Said is based in Espoo, Finland. He's available for remote work and can be contacted through the form on this website.";
+    }
+    // Services offered
+    else if (message.includes('service') || message.includes('offer') || 
+             message.includes('help with') || message.includes('assist') || 
+             message.includes('provide') || message.includes('freelance') || 
+             message.includes('consult') || message.includes('job')) {
+        return "Said offers web and mobile development services, specializing in building responsive web applications and cross-platform mobile apps. Feel free to reach out to discuss your project!";
+    }
+    // Appreciation
+    else if (message.includes('thanks') || message.includes('thank you') || 
+             message.includes('helpful') || message.includes('appreciate') || 
+             message.includes('good job') || message.includes('awesome')) {
+        return "You're welcome! I'm happy to help. Feel free to ask if you have any other questions.";
+    }
+    // How are you
+    else if (message.includes('how are you') || message.includes('how you doing') || 
+             message.includes('how\'s it going') || message.includes('how do you feel') || 
+             message.includes('what\'s going on')) {
+        return "I'm doing great, thanks for asking! How can I assist you today?";
+    }
+    // About the website
+    else if (message.includes('website') || message.includes('site') || 
+             message.includes('page') || message.includes('portfolio site') || 
+             message.includes('online') || message.includes('web presence')) {
+        return "This website showcases Said's work, skills, and projects. Feel free to browse through the different sections or ask me specific questions!";
+    }
+    // About the chatbot
+    else if (message.includes('who are you') || message.includes('what are you') || 
+             message.includes('chatbot') || message.includes('bot') || 
+             message.includes('assistant') || message.includes('ai') || 
+             message.includes('your name')) {
+        return "I'm a chatbot designed to help visitors learn more about Said and his work. I can answer questions about his projects, skills, and how to contact him.";
+    }
+    // Default response
+    else {
+        return "I'm not sure I understand. Would you like to know more about Said's projects, skills, or how to contact him?";
+    }
+}
+    }
+
+    // Add event listeners to existing Help links
+        const helpLink = document.getElementById('help-link');
+        const helpLinkFooter = document.getElementById('help-link-footer');
+
+        function openChatbot(e) {
+        e.preventDefault();
+        chatbotContainer.classList.add('open');
+        manageChatbotVisibility(true);
+    
+        // If chatbot is empty, add a welcome message
+        const chatbotMessages = document.getElementById('chatbot-messages');
+        if (chatbotMessages && chatbotMessages.children.length === 0) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message', 'bot');
+            messageDiv.textContent = "Hi there! How can I help you today?";
+            chatbotMessages.appendChild(messageDiv);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight; // Use chatbotMessages instead of messagesContainer
+        }
+    }
+
+        if (helpLink) {
+            helpLink.addEventListener('click', openChatbot);
+        }
+
+        if (helpLinkFooter) {
+            helpLinkFooter.addEventListener('click', openChatbot);
+        }
+        setupKeyboardHandling();  
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        // Mark the body as loaded after animations complete
+        setTimeout(() => {
+        document.body.classList.add('loaded');
+        }, 2500);
+    
+        // Replay animation when logo is clicked
+        const logo = document.querySelector('.logo');
+        logo.addEventListener('click', function() {
+        const path = document.querySelector('.logo-path');
+        path.style.animation = 'none';
+        path.offsetHeight; // Trigger reflow
+        path.style.animation = 'draw 2s ease forwards';
+        
+        const logoText = document.querySelector('.logo-text');
+        logoText.querySelector('::after').style.animation = 'none';
+        logoText.offsetHeight;
+        logoText.querySelector('::after').style.animation = 'slide-in 0.8s forwards';
+        });
+    });
+    </script>
+    </body>
 </html>
